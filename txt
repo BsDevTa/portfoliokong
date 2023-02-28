@@ -1,0 +1,17 @@
+ <div class="portfolio header">
+                <h1 class="section-title"><span>portfolio</span></h1>
+            </div>
+
+            <div class="all-projetos">
+                <div class="item-projetos">
+                    <div class="info-projetos">
+                        <h1>Projeto 1</h1>
+                        <h2>O famoso front-end</h2>
+                        <p>Meu primiero projeto é o meu proprio site, onde acaba sendo bem inovador ter como o primeiro projeto
+                        e o incluindo no meu portfolio, o meu desenvolvimente em uma laning page simples. </p>            
+                    </div>
+                <div class="project-img">
+                    <img src="./imagem1.jpg" alt="Foto codando">
+                </div>
+            </div>
+        </div>

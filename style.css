@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+html{
+        font-size: 8px;
+        font-family:'Roboto Mono';
+        scroll-behavior:smooth;
+        font-weight: 400px;
+}
+
+a{ 
+        text-decoration: none;
+
+}
+
+p{
+        font-size: 1.4rem;
+        margin-top: 5px;
+        line-height: 2.5rem;
+        font-weight: 100;
+        letter-spacing: 0.05rem;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.Navbar{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    background: white;
+    height: 60px;
+    border-bottom: 4px solid #ffee02;
+}
+
+.listinha{
+    list-style: none;
+    display: flex;
+}
+.listinha li a{
+    font-size:20px;
+    margin-left: 32px;
+    color: rgb(26, 26, 26);
+}
+
+.conteiner{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Aqui é minha aprensentação*/
+#apresentacao{
+    background-image: url(/background1.jpeg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+
+}
+#apresentacao h1{
+    display: block;
+    width: fit-content;
+    font-size: 5rem;
+    position: relative;
+    color:transparent;
+    animation: text_review .5s ease forwards;
+    animation-delay: 1.5;
+
+}
+#apresentacao h1:nth-child(1){
+    animation-delay: 1s;
+}
+#apresentacao h1:nth-child(2){
+    animation-delay: 2s;
+}
+#apresentacao h1:nth-child(3){
+    animation: text .5 ease forwards;
+    animation-delay: 3s;
+
+}
+
+#apresentacao .cta{
+     display:inline-block;
+     padding: 10px 30px;
+     color: #2b2b2b;
+     background-color:rgb(251, 255, 4);
+     border-radius: 20px;
+     font-size: 15px;
+     text-transform: uppercase;
+     letter-spacing: .1rem;
+     margin-top: 20px;
+     transition: .5s ease-in-out;
+     transition-property: background-color, color;
+}
+
+#apresentacao .cta:hover{
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    background-color: #1f1f1f;
+}
+
+#apresentacao h1 span{
+    position: absolute;
+    font-size: 5rem;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:0%;
+    background:linear-gradient(90deg, #8d8d8d, #f6c3f7);
+    animation: text_review_box 1s ease;
+    animation-delay: .5s;
+}
+
+#apresentacao h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+#apresentacao h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}   
+#apresentacao h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+
+
+#apresentacao::after{
+    content: '';
+    position: absolute;
+    left:0;
+    top:0;
+    height:100%;
+    width:100;
+    background-color: black;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+/*keyframe da sessão de apresentação*/
+
+@keyframes text {
+    100%{
+        color: yellow;
+    }
+    
+}
+
+@keyframes text_review{ 
+    100%{
+        color: white;
+    }
+}
+
+@keyframes text_review_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+
+    100%{
+        width: 0;
+        left: 100%;
+
+    }
+}
+
+/*Sessão portifolio*/
+
+.section-title{
+    font-size: 5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+#portfolio .portfolio{
+    flex-direction: column;
+    display: flex;
+    max-width: 1200;
+    margin: 0;
+    padding: 100px 0;
+
+}
+#portfolio .portfolio-header h1{
+    margin-bottom: 50px;
+}
+
+#portfolio .all-projetos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#portfolio .item-projetos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+
+#portfolio .info-projetos{
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+#portfolio .info-projetos h1{
+    font-size: 4rem;
+    font-weight: 400px;
+}
+
+#portfolio .info-projetos h2{
+    font-size: 12px;
+    font-weight: 50px;
+    margin-top: 10px;
+}
+
+#portfolio .projeto-img{
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+#portfolio .projeto-img::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #8d8d8d;
+    opacity: 0.7;
+}
+
+
+#portfolio .projeto-img img{
+    transition: 1s ease transform;
+}
+
+#portfolio .item-projetos:hover .projeto-img img{
+    transform:scale(1.5)
+}
+
+@media only screen and (min-width: 720px){
+
+    #portfolio .item-projetos{
+        flex-direction: row;
+        height: 400px;
+        margin: 0;
+        width: 70%;
+        border-radius: 0;
+    }
+    #portfolio .all-projetos .info-projetos{
+        height: 100%;
+    }
+        
+    #portfolio .all-projetos .projeto-img{
+        height: 100%;
+    }
+
+    #portfolio .item-projetos:nth-child(even){
+        flex-direction: row-reverse; 
+    } 
+
+}
+
+main{
+    border: #1f1f1f;
+    margin-bottom: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.Sobreme{
+    border: #1f1f1f;
+
+}
+
+
+
+.Sobre_me{
+    object-fit: cover;
+    border-left:10px solid #ffee02;
+    transition-property: all;
+    transition-duration: 3s;
+    animation: anim-Sobre-me 5s ease forwards;
+}
+
+.Sobre_me:hover{
+    border-left:10px solid #1f1f1f;
+}
+
+.titulo_sobre{
+    font-size: 8px;
+    margin-bottom: 300px;
+    padding-bottom: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align:right;
+    position: relative;
+}
+.titulo_sobre{
+    border-top: 0.1px solid black;
+}
+
+
+.informacoes_sobre_me{
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+    font-size: 7px;
+    animation: anim_text 5s ease forwards;
+}
+footer{
+    padding: 100px;
+    background: rgb(0, 0, 0);
+    border-top: 4px solid #ffee02;
+}
+
+@keyframes anim-Sobre-me{
+    from{
+        transform: translateX(-250px)
+    }
+    to{
+        transform: translateX(150px)
+    }
+}
+
+@keyframes anim_text{
+    from{
+        transform: translateX(500px);
+    }
+
+    to{
+        transform: translateX(150);
+    }
+}
